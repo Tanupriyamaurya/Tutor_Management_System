@@ -1,0 +1,531 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88F3D7BF-B34F-425F-AA56-0AE2051C58C1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMS_Project</RootNamespace>
+    <AssemblyName>TMS_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44394</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="about.html" />
+    <Content Include="admin\admin_dashboard\.gitignore" />
+    <Content Include="admin\admin_dashboard\dist\401.html" />
+    <Content Include="admin\admin_dashboard\dist\404.html" />
+    <Content Include="admin\admin_dashboard\dist\404_1.html" />
+    <Content Include="admin\admin_dashboard\dist\500.html" />
+    <Content Include="admin\admin_dashboard\dist\500_1.html" />
+    <Content Include="admin\admin_dashboard\dist\assets\demo\chart-area-demo.js" />
+    <Content Include="admin\admin_dashboard\dist\assets\demo\chart-area-demo_1.js" />
+    <Content Include="admin\admin_dashboard\dist\assets\demo\chart-bar-demo.js" />
+    <Content Include="admin\admin_dashboard\dist\assets\demo\chart-bar-demo_1.js" />
+    <Content Include="admin\admin_dashboard\dist\assets\demo\chart-pie-demo.js" />
+    <Content Include="admin\admin_dashboard\dist\assets\demo\chart-pie-demo_1.js" />
+    <Content Include="admin\admin_dashboard\dist\assets\demo\datatables-demo.js" />
+    <Content Include="admin\admin_dashboard\dist\assets\demo\datatables-demo_1.js" />
+    <Content Include="admin\admin_dashboard\dist\assets\img\error-404-monochrome.svg" />
+    <Content Include="admin\admin_dashboard\dist\assets\img\error-404-monochrome_1.svg" />
+    <Content Include="admin\admin_dashboard\dist\charts.html" />
+    <Content Include="admin\admin_dashboard\dist\charts_1.html" />
+    <Content Include="admin\admin_dashboard\dist\css\styles.css" />
+    <Content Include="admin\admin_dashboard\dist\css\styles_1.css" />
+    <Content Include="admin\admin_dashboard\dist\index.html" />
+    <Content Include="admin\admin_dashboard\dist\index_1.html" />
+    <Content Include="admin\admin_dashboard\dist\js\scripts.js" />
+    <Content Include="admin\admin_dashboard\dist\js\scripts_1.js" />
+    <Content Include="admin\admin_dashboard\dist\layout-sidenav-light.html" />
+    <Content Include="admin\admin_dashboard\dist\layout-sidenav-light_1.html" />
+    <Content Include="admin\admin_dashboard\dist\layout-static.html" />
+    <Content Include="admin\admin_dashboard\dist\layout-static_1.html" />
+    <Content Include="admin\admin_dashboard\dist\login.html" />
+    <Content Include="admin\admin_dashboard\dist\login_1.html" />
+    <Content Include="admin\admin_dashboard\dist\password.html" />
+    <Content Include="admin\admin_dashboard\dist\password_1.html" />
+    <Content Include="admin\admin_dashboard\dist\register.html" />
+    <Content Include="admin\admin_dashboard\dist\register_1.html" />
+    <Content Include="admin\admin_dashboard\dist\tables.html" />
+    <Content Include="admin\admin_dashboard\dist\tables_1.html" />
+    <Content Include="admin\admin_dashboard\index.html" />
+    <Content Include="admin\admin_dashboard\index_1.html" />
+    <Content Include="admin\admin_dashboard\scripts\build-assets.js" />
+    <Content Include="admin\admin_dashboard\scripts\build-assets_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\build-pug.js" />
+    <Content Include="admin\admin_dashboard\scripts\build-pug_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\build-scripts.js" />
+    <Content Include="admin\admin_dashboard\scripts\build-scripts_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\build-scss.js" />
+    <Content Include="admin\admin_dashboard\scripts\build-scss_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\clean.js" />
+    <Content Include="admin\admin_dashboard\scripts\clean_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\render-assets.js" />
+    <Content Include="admin\admin_dashboard\scripts\render-assets_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\render-pug.js" />
+    <Content Include="admin\admin_dashboard\scripts\render-pug_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\render-scripts.js" />
+    <Content Include="admin\admin_dashboard\scripts\render-scripts_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\render-scss.js" />
+    <Content Include="admin\admin_dashboard\scripts\render-scss_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\sb-watch.js" />
+    <Content Include="admin\admin_dashboard\scripts\sb-watch_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\start-debug.js" />
+    <Content Include="admin\admin_dashboard\scripts\start-debug_1.js" />
+    <Content Include="admin\admin_dashboard\scripts\start.js" />
+    <Content Include="admin\admin_dashboard\scripts\start_1.js" />
+    <Content Include="admin\admin_dashboard\src\assets\demo\chart-area-demo.js" />
+    <Content Include="admin\admin_dashboard\src\assets\demo\chart-area-demo_1.js" />
+    <Content Include="admin\admin_dashboard\src\assets\demo\chart-bar-demo.js" />
+    <Content Include="admin\admin_dashboard\src\assets\demo\chart-bar-demo_1.js" />
+    <Content Include="admin\admin_dashboard\src\assets\demo\chart-pie-demo.js" />
+    <Content Include="admin\admin_dashboard\src\assets\demo\chart-pie-demo_1.js" />
+    <Content Include="admin\admin_dashboard\src\assets\demo\datatables-demo.js" />
+    <Content Include="admin\admin_dashboard\src\assets\demo\datatables-demo_1.js" />
+    <Content Include="admin\admin_dashboard\src\assets\img\error-404-monochrome.svg" />
+    <Content Include="admin\admin_dashboard\src\assets\img\error-404-monochrome_1.svg" />
+    <Content Include="admin\admin_dashboard\src\js\scripts.js" />
+    <Content Include="admin\admin_dashboard\src\js\scripts_1.js" />
+    <Content Include="admin\Admin_index.aspx" />
+    <Content Include="admin\Admin_Login.aspx" />
+    <Content Include="admin\Admin_Logout.aspx" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\img\about.jpg" />
+    <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\blog-author.jpg" />
+    <Content Include="assets\img\blog-post-1.jpg" />
+    <Content Include="assets\img\blog-post-2.jpg" />
+    <Content Include="assets\img\blog-post-3.jpg" />
+    <Content Include="assets\img\blog-post-4.jpg" />
+    <Content Include="assets\img\comments-1.jpg" />
+    <Content Include="assets\img\comments-2.jpg" />
+    <Content Include="assets\img\comments-3.jpg" />
+    <Content Include="assets\img\comments-4.jpg" />
+    <Content Include="assets\img\comments-5.jpg" />
+    <Content Include="assets\img\comments-6.jpg" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\features-1.svg" />
+    <Content Include="assets\img\features-2.svg" />
+    <Content Include="assets\img\features-3.svg" />
+    <Content Include="assets\img\features-4.svg" />
+    <Content Include="assets\img\hero-bg.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-1.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-2.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-3.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-4.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-5.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-6.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-7.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-8.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-9.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-details-1.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-details-2.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-details-3.jpg" />
+    <Content Include="assets\img\recent-posts-1.jpg" />
+    <Content Include="assets\img\recent-posts-2.jpg" />
+    <Content Include="assets\img\recent-posts-3.jpg" />
+    <Content Include="assets\img\recent-posts-4.jpg" />
+    <Content Include="assets\img\recent-posts-5.jpg" />
+    <Content Include="assets\img\service-details-1.jpg" />
+    <Content Include="assets\img\service-details-2.jpg" />
+    <Content Include="assets\img\service-details-3.jpg" />
+    <Content Include="assets\img\service-details-4.jpg" />
+    <Content Include="assets\img\team\team-1.jpg" />
+    <Content Include="assets\img\team\team-2.jpg" />
+    <Content Include="assets\img\team\team-3.jpg" />
+    <Content Include="assets\img\team\team-4.jpg" />
+    <Content Include="assets\img\team\team-5.jpg" />
+    <Content Include="assets\img\team\team-6.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="assets\img\why-us.jpg" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\vendor\animate.css\animate.compat.css" />
+    <Content Include="assets\vendor\animate.css\animate.css" />
+    <Content Include="assets\vendor\animate.css\animate.min.css" />
+    <Content Include="assets\vendor\aos\aos.css" />
+    <Content Include="assets\vendor\aos\aos.js" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\vendor\boxicons\css\animations.css" />
+    <Content Include="assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="assets\vendor\counterup\counterup.min.js" />
+    <Content Include="assets\vendor\icofont\icofont.min.css" />
+    <Content Include="assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="assets\vendor\jquery.easing\jquery.easing.min.js" />
+    <Content Include="assets\vendor\jquery\jquery.min.js" />
+    <Content Include="assets\vendor\owl.carousel\assets\ajax-loader.gif" />
+    <Content Include="assets\vendor\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="assets\vendor\owl.carousel\assets\owl.carousel.min.css" />
+    <Content Include="assets\vendor\owl.carousel\assets\owl.theme.default.css" />
+    <Content Include="assets\vendor\owl.carousel\assets\owl.theme.default.min.css" />
+    <Content Include="assets\vendor\owl.carousel\assets\owl.theme.green.css" />
+    <Content Include="assets\vendor\owl.carousel\assets\owl.theme.green.min.css" />
+    <Content Include="assets\vendor\owl.carousel\assets\owl.video.play.png" />
+    <Content Include="assets\vendor\owl.carousel\owl.carousel.js" />
+    <Content Include="assets\vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="assets\vendor\php-email-form\validate.js" />
+    <Content Include="assets\vendor\venobox\venobox.css" />
+    <Content Include="assets\vendor\venobox\venobox.js" />
+    <Content Include="assets\vendor\venobox\venobox.min.css" />
+    <Content Include="assets\vendor\venobox\venobox.min.js" />
+    <Content Include="assets\vendor\waypoints\jquery.waypoints.min.js" />
+    <Content Include="blog-single.html" />
+    <Content Include="blog.html" />
+    <Content Include="changelog.txt" />
+    <Content Include="Contact.aspx" />
+    <Content Include="contact.html" />
+    <Content Include="Default.aspx" />
+    <Content Include="forms\Readme.txt" />
+    <Content Include="index-2.html" />
+    <Content Include="index.html" />
+    <Content Include="portfolio-details.html" />
+    <Content Include="portfolio.html" />
+    <Content Include="Readme.txt" />
+    <Content Include="services.html" />
+    <Content Include="Student\Student_Index.aspx" />
+    <Content Include="Student\Student_Logout.aspx" />
+    <Content Include="Student_Login.aspx" />
+    <Content Include="Student_SignUp.aspx" />
+    <Content Include="team.html" />
+    <Content Include="Tutor_Signup.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Admin_Dashboard.Master.cs">
+      <DependentUpon>Admin_Dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Admin_Dashboard.Master.designer.cs">
+      <DependentUpon>Admin_Dashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Admin_index.aspx.cs">
+      <DependentUpon>Admin_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Admin_index.aspx.designer.cs">
+      <DependentUpon>Admin_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Admin_Login.aspx.cs">
+      <DependentUpon>Admin_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Admin_Login.aspx.designer.cs">
+      <DependentUpon>Admin_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Admin_Logout.aspx.cs">
+      <DependentUpon>Admin_Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Admin_Logout.aspx.designer.cs">
+      <DependentUpon>Admin_Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\Student_Dashboard.Master.cs">
+      <DependentUpon>Student_Dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Student_Dashboard.Master.designer.cs">
+      <DependentUpon>Student_Dashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Student_Index.aspx.cs">
+      <DependentUpon>Student_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Student_Index.aspx.designer.cs">
+      <DependentUpon>Student_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Student_Logout.aspx.cs">
+      <DependentUpon>Student_Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Student_Logout.aspx.designer.cs">
+      <DependentUpon>Student_Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Login.aspx.cs">
+      <DependentUpon>Student_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student_Login.aspx.designer.cs">
+      <DependentUpon>Student_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student_SignUp.aspx.cs">
+      <DependentUpon>Student_SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student_SignUp.aspx.designer.cs">
+      <DependentUpon>Student_SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TMS_Site.Master.cs">
+      <DependentUpon>TMS_Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TMS_Site.Master.designer.cs">
+      <DependentUpon>TMS_Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor_Signup.aspx.cs">
+      <DependentUpon>Tutor_Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor_Signup.aspx.designer.cs">
+      <DependentUpon>Tutor_Signup.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".vs\Moderna.slnx\config\applicationhost.config" />
+    <Content Include=".vs\Moderna.slnx\FileContentIndex\4fd628dc-ba8c-4e72-882b-87b0738b00e3.vsidx" />
+    <Content Include=".vs\Moderna.slnx\v18\.wsuo" />
+    <Content Include=".vs\Moderna.slnx\v18\DocumentLayout.json" />
+    <Content Include=".vs\ProjectSettings.json" />
+    <Content Include=".vs\slnx.sqlite" />
+    <Content Include=".vs\VSWorkspaceState.json" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="assets\vendor\icofont\fonts\icofont.woff" />
+    <Content Include="assets\vendor\icofont\fonts\icofont.woff2" />
+    <Content Include="assets\vendor\jquery\jquery.min.map" />
+    <Content Include="assets\vendor\owl.carousel\LICENSE" />
+    <Content Include="assets\vendor\owl.carousel\README.md" />
+    <Content Include="forms\contact.php" />
+    <Content Include="admin\admin_dashboard\.browserslistrc" />
+    <Content Include="admin\admin_dashboard\.travis.yml" />
+    <Content Include="admin\admin_dashboard\LICENSE" />
+    <Content Include="admin\admin_dashboard\LICENSE_1" />
+    <Content Include="admin\admin_dashboard\package-lock.json" />
+    <Content Include="admin\admin_dashboard\package-lock_1.json" />
+    <Content Include="admin\admin_dashboard\package.json" />
+    <Content Include="admin\admin_dashboard\package_1.json" />
+    <Content Include="admin\admin_dashboard\README.md" />
+    <Content Include="admin\admin_dashboard\README_1.md" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\authentication.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\authentication_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\dashboard.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\dashboard_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\error.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\error_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\footer.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\footer_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\head\css.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\head\css_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\head\icons.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\head\icons_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\head\meta.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\head\meta_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\head\title.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\head\title_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\navigation\sidenav.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\navigation\sidenav_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\navigation\topnav.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\navigation\topnav_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\scripts.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\layouts\includes\scripts_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\401.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\401_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\404.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\404_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\500.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\500_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\charts.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\charts_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\includes\datatable.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\includes\datatable_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\includes\page-header.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\includes\page-header_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\index.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\index_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\layout-sidenav-light.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\layout-sidenav-light_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\layout-static.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\layout-static_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\login.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\login_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\password.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\password_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\register.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\register_1.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\tables.pug" />
+    <Content Include="admin\admin_dashboard\src\pug\pages\tables_1.pug" />
+    <Content Include="admin\admin_dashboard\src\scss\layout\_authentication.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\layout\_authentication_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\layout\_dashboard-default.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\layout\_dashboard-default_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\layout\_dashboard-fixed.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\layout\_dashboard-fixed_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\layout\_error.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\layout\_error_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\sidenav\_sidenav-dark.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\sidenav\_sidenav-dark_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\sidenav\_sidenav-light.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\sidenav\_sidenav-light_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\sidenav\_sidenav.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\sidenav\_sidenav_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\_nav.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\_nav_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\_topnav.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\navigation\_topnav_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\styles.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\styles_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\variables\_navigation.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\variables\_navigation_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\variables\_spacing.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\variables\_spacing_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\_global.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\_global_1.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\_variables.scss" />
+    <Content Include="admin\admin_dashboard\src\scss\_variables_1.scss" />
+    <Content Include="admin\Admin_Dashboard.Master" />
+    <None Include="packages.config" />
+    <Content Include="TMS_Site.Master" />
+    <Content Include="Student\Student_Dashboard.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59673</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44394/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+</Project>
