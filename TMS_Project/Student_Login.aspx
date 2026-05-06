@@ -27,7 +27,10 @@ style="box-shadow: 0 15px 40px rgba(0,0,0,0.4); border-radius:12px;">
                        Text="Login" 
                        CssClass="btn btn-primary w-100" 
                        runat="server" />
-
+                       <div class="text-center">                    
+                       <a href="Tutor_Login.aspx" >Login AS Tutor </a>
+                       </div>
+                       <br />
                </div>
 
            </div>

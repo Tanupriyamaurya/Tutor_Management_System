@@ -148,13 +148,32 @@
 
         </div>
 
-        <!-- Button -->
-        <div class="row mx-0 px-3 mt-3">
-            <div class="col-md-6 mx-auto">
-                <asp:Button ID="StudentSignUpButton"  onClick="StudentSignUpButton_Click" CssClass="btn btn-primary w-100" runat="server" Text="SignUp" />
-            </div>
+   <div class="row mt-4">
+    <div class="col-md-6 mx-auto text-center">
+
+        <!-- Main Signup Button -->
+        <asp:Button 
+            ID="StudentSignUpButton"
+            runat="server"
+            Text="SignUp"
+            CssClass="btn btn-primary w-100 py-2 mb-3"
+            OnClick="StudentSignUpButton_Click" />
+
+        <!-- Secondary Buttons -->
+        <div class="d-flex mt-2 md-3">
+            <a href="Student_SignUp.aspx" 
+               class="btn btn-success me-2 flex-fill">
+                Student
+            </a>
+
+            <a href="Tutor_Signup.aspx" 
+               class="btn btn-info ms-2 flex-fill">
+                Tutor
+            </a>
         </div>
 
+    </div>
+</div>
     </div>
 
 </div>
